@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "unxxMoHIHPnyzUK8kJBxEun+JTwfGt+2BYWpy2twjORC2D2YKQX09Pk3Y3Cpdf/E9FOMsD3sv7Ha7k6pJNDhnQ==",
+  "dgSpecHash": "/alQk5yCW64qDI+SQRj5RaEhlCk6yaR73bTyVh7iDuYySuB/RHq1vRVgxU+wukmKBRmEqkJcgaaO624ly7lr9w==",
   "success": true,
   "projectFilePath": "C:\\Git\\senior.api\\src\\senior.api\\senior.api.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\LeonardodeLimaOlivei\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.2\\microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512"
+  ],
   "logs": []
 }
