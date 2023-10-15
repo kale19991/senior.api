@@ -12,30 +12,35 @@ public class LocalityMap : IEntityTypeConfiguration<Locality>
 
         builder.HasKey(x => x.Id);
 
-        builder.Property(x => x.Id)
-            .HasColumnType("CHAR")
-            .HasMaxLength(7);
+        //builder.OwnsOne(x => x.Id, tf =>
+        //{
+        //    tf.Property(t => t.Value)
+        //      .HasColumnName("Id")
+        //      .HasColumnType("CHAR")
+        //      .HasMaxLength(7);
+        //});
 
-        builder.OwnsOne(x => x.City, tf =>
+
+        builder.OwnsOne(x => x.State, tf =>
         {
-            tf.Property(t => t.State)
-                .HasColumnType("CHAR")
-                .HasMaxLength(2)
-                .HasColumnName("State")
-                .IsRequired();
+            tf.Property(t => t.Value)
+              .HasColumnName("State")
+              .HasColumnType("CHAR")
+              .HasMaxLength(2)
+              .IsRequired();
 
-            tf.HasIndex(t => t.State).HasDatabaseName("IX_Locality_State");
+            tf.HasIndex(t => t.Value).HasDatabaseName("IX_Locality_State");
         });
 
         builder.OwnsOne(x => x.City, tf =>
         {
-            tf.Property(t => t.Name)
-                .HasColumnType("NVARCHAR")
-                .HasMaxLength(80)
-                .HasColumnName("Name")
-                .IsRequired();
+            tf.Property(t => t.Value)
+              .HasColumnName("City")
+              .HasColumnType("NVARCHAR")
+              .HasMaxLength(80)
+              .IsRequired();
 
-            tf.HasIndex(t => t.Name).HasDatabaseName("IX_Locality_Name");
+            tf.HasIndex(t => t.Value).HasDatabaseName("IX_Locality_City");
         });
     }
 }

@@ -14,26 +14,26 @@ public class UserMap : IEntityTypeConfiguration<User>
 
         builder
             .Property(x => x.Name)
-            .IsRequired()
             .HasColumnType("NVARCHAR")
-            .HasMaxLength(150);
+            .HasMaxLength(150)
+            .IsRequired();
 
         builder.OwnsOne(x => x.Email, tf =>
         {
             tf.Property(t => t.Value)
-              .IsRequired()
               .HasColumnName("Email")
               .HasColumnType("NVARCHAR")
-              .HasMaxLength(200);
+              .HasMaxLength(200)
+              .IsRequired();
 
             tf.HasIndex(t => t.Value).HasDatabaseName("IX_User_Email").IsUnique();
         });
 
         builder
             .Property(x => x.PasswordHash)
-            .IsRequired()
             .HasColumnName("PasswordHash")
             .HasColumnType("NVARCHAR")
-            .HasMaxLength(250);        
+            .HasMaxLength(250)
+            .IsRequired();
     }
 }
