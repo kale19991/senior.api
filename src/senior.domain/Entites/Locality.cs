@@ -1,4 +1,5 @@
 ﻿using senior.domain.ValueObjects;
+using System.ComponentModel.DataAnnotations;
 
 namespace senior.domain.Entites;
 
@@ -9,15 +10,15 @@ public class Locality
 #pragma warning restore CS8618 // O campo não anulável precisa conter um valor não nulo ao sair do construtor. Considere declará-lo como anulável.
 
     public Locality(
-        string id,
+        string ibgeCodigo,
         CityName cityName,
         CityState cityState)
     {
-        Id = id;
+        Id = ibgeCodigo;
         City = cityName;
         State = cityState;
     }
-
+    
     public string Id { get; private set; }
     
     public CityName City { get; private set; }

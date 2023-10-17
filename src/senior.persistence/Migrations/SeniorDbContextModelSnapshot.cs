@@ -24,7 +24,9 @@ namespace senior.persistence.Migrations
             modelBuilder.Entity("senior.domain.Entites.Locality", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(7)
+                        .HasColumnType("CHAR")
+                        .HasColumnName("Id");
 
                     b.HasKey("Id");
 
@@ -52,7 +54,7 @@ namespace senior.persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("users", (string)null);
+                    b.ToTable("user", (string)null);
                 });
 
             modelBuilder.Entity("senior.domain.Entites.Locality", b =>
@@ -60,7 +62,7 @@ namespace senior.persistence.Migrations
                     b.OwnsOne("senior.domain.ValueObjects.CityName", "City", b1 =>
                         {
                             b1.Property<string>("LocalityId")
-                                .HasColumnType("nvarchar(450)");
+                                .HasColumnType("CHAR(7)");
 
                             b1.Property<string>("Value")
                                 .IsRequired()
@@ -82,7 +84,7 @@ namespace senior.persistence.Migrations
                     b.OwnsOne("senior.domain.ValueObjects.CityState", "State", b1 =>
                         {
                             b1.Property<string>("LocalityId")
-                                .HasColumnType("nvarchar(450)");
+                                .HasColumnType("CHAR(7)");
 
                             b1.Property<string>("Value")
                                 .IsRequired()
@@ -127,7 +129,7 @@ namespace senior.persistence.Migrations
                                 .IsUnique()
                                 .HasDatabaseName("IX_User_Email");
 
-                            b1.ToTable("users");
+                            b1.ToTable("user");
 
                             b1.WithOwner()
                                 .HasForeignKey("UserId");

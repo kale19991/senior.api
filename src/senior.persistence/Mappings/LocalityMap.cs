@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using senior.domain.Entites;
 
@@ -10,7 +11,13 @@ public class LocalityMap : IEntityTypeConfiguration<Locality>
     {
         builder.ToTable("locality");
 
-        builder.HasKey(x => x.Id);
+        builder.HasKey(t => t.Id);
+
+        builder.Property(x => x.Id)
+            .HasColumnName("Id")
+            .HasColumnType("CHAR")
+            .HasMaxLength(7)
+            .IsRequired();
 
         //builder.OwnsOne(x => x.Id, tf =>
         //{
@@ -18,6 +25,8 @@ public class LocalityMap : IEntityTypeConfiguration<Locality>
         //      .HasColumnName("Id")
         //      .HasColumnType("CHAR")
         //      .HasMaxLength(7);
+
+        //    tf.HasIndex(t => t.Value).HasDatabaseName("IX_Locality_Id");
         //});
 
 

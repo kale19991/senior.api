@@ -9,12 +9,11 @@ public class User
 #pragma warning restore CS8618 // O campo não anulável precisa conter um valor não nulo ao sair do construtor. Considere declará-lo como anulável.
     public User(
         string name,
-        Email email,
-        string passwordHash)
+        Email email)
     {
         Name = name;
         Email = email;
-        PasswordHash = passwordHash;
+        PasswordHash = string.Empty;
     }
 
     public int Id { get; private set; }
@@ -23,12 +22,8 @@ public class User
     public string PasswordHash { get; private set;}
 
     public void AlterName(string name)
-    {
-        Name = name;
-    }
+        => Name = name;
 
     public void AlterPassword(string passwordHash) 
-    {
-        PasswordHash = passwordHash;
-    }
+        => PasswordHash = passwordHash;
 }

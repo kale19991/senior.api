@@ -8,7 +8,7 @@ public class UserMap : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        builder.ToTable("users");
+        builder.ToTable("user");
 
         builder.HasKey(t => t.Id);
 
