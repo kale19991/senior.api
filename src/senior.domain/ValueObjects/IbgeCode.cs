@@ -3,7 +3,7 @@ namespace senior.domain.ValueObjects;
 
 public sealed class IbgeCode : ValueObject
 {
-    private IbgeCode(string value)
+    public IbgeCode(string value)
         => Value = value;
 
     public string Value { get; }    

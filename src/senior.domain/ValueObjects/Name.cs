@@ -4,7 +4,7 @@ namespace senior.domain.ValueObjects;
 
 public class Name : ValueObject
 {
-    private Name(string value)
+    public Name(string value)
         => Value = value;
 
     public string Value { get; }    

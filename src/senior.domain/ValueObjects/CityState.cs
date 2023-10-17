@@ -5,7 +5,7 @@ namespace senior.domain.ValueObjects;
 public sealed class CityState : ValueObject
 
 {
-    private CityState(string value)
+    public CityState(string value)
         => Value = value;
 
     public string Value { get; }    

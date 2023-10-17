@@ -4,7 +4,7 @@ namespace senior.domain.ValueObjects;
 
 public sealed class Email : ValueObject
 {
-    private Email(string value)
+    public Email(string value)
         => Value = value;
 
     public string Value { get; }    

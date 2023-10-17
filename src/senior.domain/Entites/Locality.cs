@@ -1,5 +1,4 @@
 ﻿using senior.domain.ValueObjects;
-using System.ComponentModel.DataAnnotations;
 
 namespace senior.domain.Entites;
 
