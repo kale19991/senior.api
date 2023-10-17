@@ -1,7 +1,7 @@
 namespace senior.test
 {
     [TestClass]
-    public class UnitTest1
+    public class UserTest
     {
         [TestMethod]
         public void TestMethod1()
