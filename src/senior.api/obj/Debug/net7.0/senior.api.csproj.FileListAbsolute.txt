@@ -100,3 +100,8 @@ C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\Microsoft.EntityFrameworkC
 C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\System.CodeDom.dll
+C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\dev\git\senior.api\src\senior.api\obj\Debug\net7.0\senior.api.MvcApplicationPartsAssemblyInfo.cs

@@ -11,7 +11,7 @@ using senior.persistence.Context;
 namespace senior.persistence.Migrations
 {
     [DbContext(typeof(SeniorDbContext))]
-    [Migration("20231017004648_DatabaseCreate")]
+    [Migration("20231018000708_DatabaseCreate")]
     partial class DatabaseCreate
     {
         /// <inheritdoc />

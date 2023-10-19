@@ -1,10 +1,10 @@
 ﻿using senior.domain.Abstractions.Messaging;
 
-namespace senior.application.Commands.CreateLocality;
+namespace senior.application.Commands.LocalityCommands;
 
-public class CreateLocalityCommand : ICommand
+public class CreateCommand : ICommand
 {
-    public CreateLocalityCommand(
+    public CreateCommand(
         string ibgeCode,
         string name,
         string state)

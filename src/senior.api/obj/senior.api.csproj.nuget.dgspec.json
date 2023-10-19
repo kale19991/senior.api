@@ -35,9 +35,6 @@
             "projectReferences": {
               "C:\\dev\\git\\senior.api\\src\\senior.application\\senior.application.csproj": {
                 "projectPath": "C:\\dev\\git\\senior.api\\src\\senior.application\\senior.application.csproj"
-              },
-              "C:\\dev\\git\\senior.api\\src\\senior.persistence\\senior.persistence.csproj": {
-                "projectPath": "C:\\dev\\git\\senior.api\\src\\senior.persistence\\senior.persistence.csproj"
               }
             }
           }
@@ -61,6 +58,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

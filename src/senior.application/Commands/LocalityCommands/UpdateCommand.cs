@@ -1,12 +1,12 @@
 ﻿using senior.domain.Abstractions.Messaging;
 
-namespace senior.application.Commands.UpdateLocality;
+namespace senior.application.Commands.LocalityCommands;
 
-public class UpdateLocalityCommand : ICommand
+public class UpdateCommand : ICommand
 {
-    public UpdateLocalityCommand(
-        string ibgeCode, 
-        string name, 
+    public UpdateCommand(
+        string ibgeCode,
+        string name,
         string state)
     {
         IbgeCode = ibgeCode;

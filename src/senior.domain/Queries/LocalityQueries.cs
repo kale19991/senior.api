@@ -6,7 +6,7 @@ namespace senior.domain.Queries
 {
     public static class LocalityQueries
     {
-        public static Expression<Func<Locality, bool>> GetLocalityByIbgeCode(string ibgeCode)
+        public static Expression<Func<Locality, bool>> GetLocalityByIbgeCode(IbgeCode ibgeCode)
         {
             return x => x.Id == ibgeCode;
         }

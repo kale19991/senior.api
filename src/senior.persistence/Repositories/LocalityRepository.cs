@@ -23,7 +23,7 @@ public sealed class LocalityRepository : ILocalityRepository
     public void Update(Locality locality)
         => _context.Localitys.Update(locality);
 
-    public async Task<Locality?> GetByIbgeAsync(string ibgeCode)
+    public async Task<Locality?> GetByIbgeAsync(IbgeCode ibgeCode)
     {
         var locality = await _context.Localitys
             .Where(LocalityQueries.GetLocalityByIbgeCode(ibgeCode))

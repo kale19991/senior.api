@@ -1,6 +1,6 @@
 using senior.domain.Entites;
 
-namespace senior.test.EntityTests
+namespace senior.test.Entites
 {
     [TestClass]
     public class UserTest
@@ -8,11 +8,11 @@ namespace senior.test.EntityTests
         private readonly User userBase;
         private readonly User userModified;
 
-        public UserTest() 
+        public UserTest()
         {
-             userBase = new User(
-                 "Silvério Botelho de Rezende Carvalho", 
-                 "silveriobrc@gmail.com");
+            userBase = new User(
+                "Silvério Botelho de Rezende Carvalho",
+                "silveriobrc@gmail.com");
 
             userModified = new User(
                  "Silvério Botelho de Rezende Carvalho",
@@ -21,7 +21,7 @@ namespace senior.test.EntityTests
 
         [TestMethod]
         public void ShouldAlterUserNameInPrivateClassMethods()
-        {            
+        {
             userModified.AlterName("Nome Alterado");
             Assert.AreNotEqual(userBase.Name, userModified.Name);
         }
