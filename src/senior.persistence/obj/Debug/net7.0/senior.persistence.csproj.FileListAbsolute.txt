@@ -1,0 +1,17 @@
+C:\dev\git\senior.api\src\senior.persistence\bin\Debug\net7.0\senior.persistence.deps.json
+C:\dev\git\senior.api\src\senior.persistence\bin\Debug\net7.0\senior.persistence.runtimeconfig.json
+C:\dev\git\senior.api\src\senior.persistence\bin\Debug\net7.0\senior.persistence.dll
+C:\dev\git\senior.api\src\senior.persistence\bin\Debug\net7.0\senior.persistence.pdb
+C:\dev\git\senior.api\src\senior.persistence\bin\Debug\net7.0\senior.domain.dll
+C:\dev\git\senior.api\src\senior.persistence\bin\Debug\net7.0\senior.domain.pdb
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\senior.persistence.csproj.AssemblyReference.cache
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\senior.persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\senior.persistence.AssemblyInfoInputs.cache
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\senior.persistence.AssemblyInfo.cs
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\senior.persistence.csproj.CoreCompileInputs.cache
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\senior.persistence.csproj.CopyComplete
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\senior.persistence.dll
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\refint\senior.persistence.dll
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\senior.persistence.pdb
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\senior.persistence.genruntimeconfig.cache
+C:\dev\git\senior.api\src\senior.persistence\obj\Debug\net7.0\ref\senior.persistence.dll

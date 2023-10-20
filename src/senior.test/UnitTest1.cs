@@ -1,10 +1,11 @@
-namespace senior.test;
-
-public class UnitTest1
+namespace senior.test
 {
-    [Fact]
-    public void Test1()
+    [TestClass]
+    public class UserTest
     {
-
+        [TestMethod]
+        public void TestMethod1()
+        {
+        }
     }
 }
