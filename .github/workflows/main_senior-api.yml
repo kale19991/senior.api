@@ -25,10 +25,11 @@ jobs:
           include-prerelease: true
           cache: false
 
-
+      - name: Build with dotnet
+        run: dotnet build ${{ github.workspace }}/src/senior.api --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish /src/senior.api -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish ${{ github.workspace }}/src/senior.api -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
