@@ -2918,24 +2918,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\silve\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\eng_l\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\git\\senior.api\\src\\senior.application\\senior.application.csproj",
+      "projectUniqueName": "F:\\Git\\senior.api\\src\\senior.application\\senior.application.csproj",
       "projectName": "senior.application",
-      "projectPath": "C:\\dev\\git\\senior.api\\src\\senior.application\\senior.application.csproj",
-      "packagesPath": "C:\\Users\\silve\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\git\\senior.api\\src\\senior.application\\obj\\",
+      "projectPath": "F:\\Git\\senior.api\\src\\senior.application\\senior.application.csproj",
+      "packagesPath": "C:\\Users\\eng_l\\.nuget\\packages\\",
+      "outputPath": "F:\\Git\\senior.api\\src\\senior.application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\dev\\git\\senior.api\\NuGet.Config",
-        "C:\\Users\\silve\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "F:\\Git\\senior.api\\NuGet.Config",
+        "C:\\Users\\eng_l\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2950,8 +2952,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\dev\\git\\senior.api\\src\\senior.persistence\\senior.persistence.csproj": {
-              "projectPath": "C:\\dev\\git\\senior.api\\src\\senior.persistence\\senior.persistence.csproj"
+            "F:\\Git\\senior.api\\src\\senior.persistence\\senior.persistence.csproj": {
+              "projectPath": "F:\\Git\\senior.api\\src\\senior.persistence\\senior.persistence.csproj"
             }
           }
         }
