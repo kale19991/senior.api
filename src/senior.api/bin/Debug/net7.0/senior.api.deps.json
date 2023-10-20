@@ -8,15 +8,20 @@
     ".NETCoreApp,Version=v7.0": {
       "senior.api/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
           "Microsoft.EntityFrameworkCore.Design": "7.0.12",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.5",
           "Swashbuckle.AspNetCore": "6.5.0",
           "senior.application": "1.0.0"
+=======
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.17.2"
+>>>>>>> 6370cf4f71637c97332938a957f31d78a54cb2f9
         },
         "runtime": {
           "senior.api.dll": {}
         }
       },
+<<<<<<< HEAD
       "Azure.Core/1.25.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
@@ -619,6 +624,9 @@
           "senior.persistence.dll": {}
         }
       }
+=======
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.17.2": {}
+>>>>>>> 6370cf4f71637c97332938a957f31d78a54cb2f9
     }
   },
   "libraries": {
@@ -627,6 +635,7 @@
       "serviceable": false,
       "sha512": ""
     },
+<<<<<<< HEAD
     "Azure.Core/1.25.0": {
       "type": "package",
       "serviceable": true,
@@ -1103,6 +1112,14 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+=======
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.17.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5daNXm8Hb016oETmuHXiW8jclmRR9CzM7XrOh2htYhQ/7AAYtqntZ1MrZkh09+JTtdjYdGsy2XIMPe9cg83x5w==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.17.2",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.17.2.nupkg.sha512"
+>>>>>>> 6370cf4f71637c97332938a957f31d78a54cb2f9
     }
   }
 }
