@@ -21,6 +21,7 @@ jobs:
         with:
           dotnet-version: '7.0.x'
           include-prerelease: true
+          cache: false
 
       - name: Build with dotnet
         run: dotnet build /src/senior.api --configuration Release
