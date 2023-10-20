@@ -25,8 +25,7 @@ jobs:
           include-prerelease: true
           cache: false
 
-      - name: Build with dotnet
-        run: dotnet build /src/senior.api --configuration Release
+
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
