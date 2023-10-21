@@ -1,13 +1,14 @@
 ﻿using senior.domain.Abstractions.Messaging;
+using senior.domain.ValueObjects;
 
 namespace senior.application.Commands.LocalityCommands;
 
 public class DeleteCommand : ICommand
 {
-    public DeleteCommand(string ibgeCode)
+    public DeleteCommand(IbgeCode ibgeCode)
     {
         IbgeCode = ibgeCode;
     }
 
-    public string IbgeCode { get; private set; }
+    public IbgeCode IbgeCode { get; private set; }
 }

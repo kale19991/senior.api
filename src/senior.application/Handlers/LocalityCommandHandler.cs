@@ -1,14 +1,16 @@
-﻿using senior.domain.Abstractions;
+﻿using senior.application.Commands;
+using senior.application.Commands.LocalityCommands;
+using senior.domain.Abstractions;
 using senior.domain.Abstractions.Messaging;
 using senior.domain.Abstractions.Repositories;
 using senior.domain.Entites;
 
-namespace senior.application.Commands.LocalityCommands;
+namespace senior.application.Handlers;
 
 public class LocalityCommandHandler :
-    IHandler<CreateCommand>,
-    IHandler<DeleteCommand>,
-    IHandler<UpdateCommand>
+    ICommandHandler<CreateCommand>,
+    ICommandHandler<DeleteCommand>,
+    ICommandHandler<UpdateCommand>
 {
     private readonly ILocalityRepository _localityRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -43,7 +45,7 @@ public class LocalityCommandHandler :
         CancellationToken cancelationToken)
     {
         //fazer a validação(se tiver válido)
-        var locality = await _localityRepository.GetByIbgeAsync(command.IbgeCode);
+        var locality = (await _localityRepository.GetByIbgeAsync(command.IbgeCode)).FirstOrDefault();
         if (locality == null)
             return new CommandResult(false, $"A localização com Ibge: {command.IbgeCode} não foi encontrada", command);
 
@@ -60,7 +62,7 @@ public class LocalityCommandHandler :
     {
         //validação do command
 
-        var locality = await _localityRepository.GetByIbgeAsync(command.IbgeCode);
+        var locality = (await _localityRepository.GetByIbgeAsync(command.IbgeCode)).FirstOrDefault();
 
         if (locality == null)
             return new CommandResult(false, "A localização a atualizar não foi encontrada no cadastro", command);

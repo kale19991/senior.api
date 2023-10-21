@@ -9,7 +9,7 @@ public interface ILocalityRepository
     void Update(Locality locality);
     void Delete(Locality locality);
 
-    Task<Locality?> GetByIbgeAsync(IbgeCode ibgeCode);
+    Task<IEnumerable<Locality>> GetByIbgeAsync(IbgeCode ibgeCode);
     Task<IEnumerable<Locality>> GetByCityNameAsync(CityName city);
-    Task<IEnumerable<Locality>> GetAllByStateAsync(CityState state);
+    Task<IEnumerable<Locality>> GetByStateAsync(CityState state);
 }

@@ -105,3 +105,5 @@ C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swa
 C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\dev\git\senior.api\src\senior.api\obj\Debug\net7.0\senior.api.MvcApplicationPartsAssemblyInfo.cs
+C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\AutoMapper.dll
+C:\dev\git\senior.api\src\senior.api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
