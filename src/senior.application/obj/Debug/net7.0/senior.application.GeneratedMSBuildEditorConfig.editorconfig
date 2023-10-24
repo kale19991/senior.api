@@ -8,4 +8,5 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = senior.application
-build_property.ProjectDir = C:\dev\git\senior.api\src\senior.application\
+build_property.ProjectDir = F:\Git\senior.api\src\senior.application\
+build_property.EnableComHosting = 

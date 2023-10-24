@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using senior.api.Configurations;
 using senior.application;
 using senior.application.Abstractions;
 using senior.application.Commands.LocalityCommands;
@@ -37,13 +39,18 @@ builder.Services.AddAuthentication(x =>
             ValidateAudience = false,
         };
     });
+builder.Services.AddMeSwagger();
 
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
+app.UseSwagger();
+app.UseSwaggerUI();
+
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 #region LOCALITY
 
