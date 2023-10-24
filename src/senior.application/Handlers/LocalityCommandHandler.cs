@@ -151,5 +151,10 @@ public class LocalityCommandHandler :
                 $"Problemas no upload do arquivo",
                 new { Upload = $"A extensão do arquivo precisa ser .csv" });
         }
+
+        return new CommandResult(
+                true,
+                $"Problemas no upload do arquivo",
+                new { Upload = $"{command.UploadFile?.FileName}" });
     }
 }
