@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lnO5jbsK/sftpe3PvGodskpPXXqLdyEZSzyC2gMC+DFKWswI4zBnKjQqFPhSWCOEf347F8765wWRwkdmPx9SQw==",
+  "dgSpecHash": "cmtETpHo8j2yPMPxRyoQXKZZ4v5G76z/yHnV+eYU0laHekNmjCTuxZSBU3Mu8cqjqU5cKkIdD1ODG/orByyZyw==",
   "success": true,
   "projectFilePath": "F:\\Git\\senior.api\\src\\senior.application\\senior.application.csproj",
   "expectedPackageFiles": [
@@ -70,10 +70,7 @@
     "C:\\Users\\eng_l\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\eng_l\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
     "C:\\Users\\eng_l\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\eng_l\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\eng_l\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.8\\microsoft.netcore.app.ref.7.0.8.nupkg.sha512",
-    "C:\\Users\\eng_l\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.8\\microsoft.windowsdesktop.app.ref.7.0.8.nupkg.sha512",
-    "C:\\Users\\eng_l\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.8\\microsoft.aspnetcore.app.ref.7.0.8.nupkg.sha512"
+    "C:\\Users\\eng_l\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

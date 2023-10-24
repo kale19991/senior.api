@@ -39,8 +39,9 @@ builder.Services.AddAuthentication(x =>
             ValidateAudience = false,
         };
     });
-builder.Services.AddMeSwagger();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddMeSwagger();
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
@@ -68,7 +69,7 @@ app.MapPost("api/v1/ibge", async (
         new CancellationToken());
 
     return result;
-}).RequireAuthorization();
+}).WithTags("loacality").RequireAuthorization();
 
 app.MapDelete("api/v1/ibge/{ibgeCode}", async (
     [FromRoute] string ibgeCode,
@@ -81,7 +82,7 @@ app.MapDelete("api/v1/ibge/{ibgeCode}", async (
         new CancellationToken());
 
     return result;
-}).RequireAuthorization();
+}).WithTags("loacality").RequireAuthorization();
 
 app.MapPut("api/v1/ibge/{ibgeCode}", async (
     [FromRoute] string ibgeCode,
@@ -95,7 +96,7 @@ app.MapPut("api/v1/ibge/{ibgeCode}", async (
         new CancellationToken());
 
     return result;
-}).RequireAuthorization();
+}).WithTags("loacality").RequireAuthorization();
 
 app.MapGet("api/v1/ibge/code/{ibgeCode}", async (
     [FromRoute] string ibgeCode,
@@ -108,7 +109,7 @@ app.MapGet("api/v1/ibge/code/{ibgeCode}", async (
         new CancellationToken());
     
     return result;
-}).RequireAuthorization();
+}).WithTags("loacality").RequireAuthorization();
 
 app.MapGet("api/v1/ibge/name/{cityName}", async (
     [FromRoute] string cityName,
@@ -120,7 +121,7 @@ app.MapGet("api/v1/ibge/name/{cityName}", async (
         new CancellationToken());
     
     return result;
-}).RequireAuthorization();
+}).WithTags("loacality").RequireAuthorization();
 
 app.MapGet("api/v1/ibge/state/{cityState}", async (
     [FromRoute] string cityState,
@@ -132,7 +133,7 @@ app.MapGet("api/v1/ibge/state/{cityState}", async (
         new CancellationToken());
 
     return result;
-}).RequireAuthorization();
+}).WithTags("loacality").RequireAuthorization();
 
 app.MapPost("api/v1/ibge/uploadcsv", async (
     IFormFile arquivo,
@@ -141,7 +142,7 @@ app.MapPost("api/v1/ibge/uploadcsv", async (
     if (arquivo == null || arquivo.Length == 0) return;
 
     var extension = Path.GetExtension(arquivo.FileName);
-}).RequireAuthorization();
+}).WithTags("loacality").RequireAuthorization();
 
 
 #endregion
@@ -161,7 +162,7 @@ app.MapPost("api/v1/account", async (
         new CancellationToken());
     
     return result;
-});
+}).WithTags("accounts");
 
 app.MapPut("api/v1/account", async (
     [FromBody] AlterUserNameViewModel account,
@@ -177,7 +178,7 @@ app.MapPut("api/v1/account", async (
         new CancellationToken());
 
     return result;
-}).RequireAuthorization();
+}).WithTags("accounts").RequireAuthorization();
 
 app.MapPost("api/v1/account/login", async (
     [FromBody] LoginViewModel login,
@@ -192,7 +193,7 @@ app.MapPost("api/v1/account/login", async (
         new CancellationToken());
 
     return result;
-});
+}).WithTags("accounts");
 
 #endregion
 
