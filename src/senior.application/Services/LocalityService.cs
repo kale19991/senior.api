@@ -43,7 +43,7 @@ public class LocalityService : ILocalityService
 
     public async Task<CommandResult> UploadCsvFile(UploadCsvCommand command, CancellationToken cancelationToken)
     {
-        return (CommandResult)await _commandHandler.Handle(UploadCsvCommand, cancelationToken);
+        return (CommandResult)await _commandHandler.Handle(command, cancelationToken);
     }
 
     public async Task<ListIbgeViewModel?> GetIbgeByCode(
