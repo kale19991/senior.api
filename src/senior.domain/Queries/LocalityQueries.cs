@@ -13,12 +13,12 @@ namespace senior.domain.Queries
 
         public static Expression<Func<Locality, bool>> GetLocalityByState(CityState state)
         {
-            return x => x.State == state;
+            return x => x.State.Value == state.Value;
         }
 
         public static Expression<Func<Locality, bool>> GetLocalityByCityName(CityName city)
         {
-            return x => x.City == city;
+            return x => x.City.Value == city.Value;
         }
     }
 }

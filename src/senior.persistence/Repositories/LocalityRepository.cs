@@ -23,30 +23,24 @@ public sealed class LocalityRepository : ILocalityRepository
     public void Update(Locality locality)
         => _context.Localitys.Update(locality);
 
-    public async Task<Locality?> GetByIbgeAsync(IbgeCode ibgeCode)
+    public async Task<IEnumerable<Locality>> GetByIbgeAsync(IbgeCode ibgeCode)
     {
-        var locality = await _context.Localitys
+        return await _context.Localitys
             .Where(LocalityQueries.GetLocalityByIbgeCode(ibgeCode))
-            .FirstOrDefaultAsync();
-
-        return locality;
+            .ToListAsync();
     }
 
-    public async Task<IEnumerable<Locality>> GetAllByStateAsync(CityState state)
+    public async Task<IEnumerable<Locality>> GetByStateAsync(CityState state)
     {
-        var localities = await _context.Localitys
+        return await _context.Localitys
             .Where(LocalityQueries.GetLocalityByState(state))
             .ToListAsync();
-
-        return localities;
     }
 
     public async Task<IEnumerable<Locality>> GetByCityNameAsync(CityName city)
     {
-        var localities = await _context.Localitys
+        return await _context.Localitys
             .Where(LocalityQueries.GetLocalityByCityName(city))
             .ToListAsync();
-
-        return localities;
     }    
 }
