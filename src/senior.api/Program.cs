@@ -39,8 +39,9 @@ builder.Services.AddAuthentication(x =>
             ValidateAudience = false,
         };
     });
-builder.Services.AddMeSwagger();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddMeSwagger();
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
