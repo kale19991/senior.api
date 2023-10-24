@@ -1,4 +1,5 @@
 C:\dev\git\senior.api\src\senior.application\bin\Debug\net7.0\senior.application.deps.json
+C:\dev\git\senior.api\src\senior.application\bin\Debug\net7.0\senior.application.runtimeconfig.json
 C:\dev\git\senior.api\src\senior.application\bin\Debug\net7.0\senior.application.dll
 C:\dev\git\senior.api\src\senior.application\bin\Debug\net7.0\senior.application.pdb
 C:\dev\git\senior.api\src\senior.application\bin\Debug\net7.0\senior.domain.dll
@@ -14,6 +15,5 @@ C:\dev\git\senior.api\src\senior.application\obj\Debug\net7.0\senior.application
 C:\dev\git\senior.api\src\senior.application\obj\Debug\net7.0\senior.application.dll
 C:\dev\git\senior.api\src\senior.application\obj\Debug\net7.0\refint\senior.application.dll
 C:\dev\git\senior.api\src\senior.application\obj\Debug\net7.0\senior.application.pdb
-C:\dev\git\senior.api\src\senior.application\obj\Debug\net7.0\ref\senior.application.dll
-C:\dev\git\senior.api\src\senior.application\bin\Debug\net7.0\senior.application.runtimeconfig.json
 C:\dev\git\senior.api\src\senior.application\obj\Debug\net7.0\senior.application.genruntimeconfig.cache
+C:\dev\git\senior.api\src\senior.application\obj\Debug\net7.0\ref\senior.application.dll

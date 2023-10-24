@@ -24,6 +24,6 @@ public class User
     public void AlterName(string name)
         => Name = name;
 
-    public void AlterPassword(string passwordHash) 
+    public void SetPassword(string passwordHash) 
         => PasswordHash = passwordHash;
 }

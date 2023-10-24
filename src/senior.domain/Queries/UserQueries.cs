@@ -8,6 +8,6 @@ public abstract class UserQueries
 {
     public static Expression<Func<User, bool>> GetUserByEmail(Email email)
     {
-        return x => x.Email == email;
+        return x => x.Email.Value == email.Value;
     }    
 }

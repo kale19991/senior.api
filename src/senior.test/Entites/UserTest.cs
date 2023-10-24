@@ -29,7 +29,7 @@ namespace senior.test.Entites
         [TestMethod]
         public void ShouldAlterUserPasswordInPrivateClassMethods()
         {
-            userModified.AlterPassword("Nova Senha");
+            userModified.SetPassword("Nova Senha");
             Assert.AreNotEqual(userBase.PasswordHash, userModified.PasswordHash);
         }
     }

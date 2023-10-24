@@ -5,9 +5,7 @@ namespace senior.application.Queries.LocalityQueries;
 public class GetByCityNameQuery : IQuery
 {
     public GetByCityNameQuery(string cityName)
-    {
-        CityName = cityName;
-    }
+        => CityName = cityName;
 
     public string CityName { get; }
 }

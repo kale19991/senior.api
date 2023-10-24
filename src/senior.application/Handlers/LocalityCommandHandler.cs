@@ -1,5 +1,8 @@
-﻿using senior.application.Commands;
+﻿using senior.application.Abstractions.Messages;
+using senior.application.Commands;
 using senior.application.Commands.LocalityCommands;
+using senior.application.Validations.LocalityValidations;
+using senior.application.ViewModels.Locality;
 using senior.domain.Abstractions;
 using senior.domain.Abstractions.Messaging;
 using senior.domain.Abstractions.Repositories;
@@ -8,26 +11,38 @@ using senior.domain.Entites;
 namespace senior.application.Handlers;
 
 public class LocalityCommandHandler :
-    ICommandHandler<CreateCommand>,
-    ICommandHandler<DeleteCommand>,
-    ICommandHandler<UpdateCommand>
+    BaseHandler,
+    ICommandHandler<CreateLocalityCommand>,
+    ICommandHandler<DeleteLocalityCommand>,
+    ICommandHandler<UpdateLocalityCommand>,
+    ICommandHandler<UploadCsvCommand>
 {
     private readonly ILocalityRepository _localityRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IValidationMessage _validationMessage;
 
     public LocalityCommandHandler(
         ILocalityRepository localityRepository,
-        IUnitOfWork unitOfWork)
+        IUnitOfWork unitOfWork,
+        IValidationMessage validationMessage) : base(validationMessage)
     {
         _localityRepository = localityRepository;
         _unitOfWork = unitOfWork;
+        _validationMessage = validationMessage;
     }
 
     public async Task<ICommandResult> Handle(
-        CreateCommand command,
+        CreateLocalityCommand command,
         CancellationToken cancelationToken)
-    {
-        //fazer a validação(se tiver válido)
+    {        
+        if (!ExecuteValidation(new CrateCommandValidation(), command))
+        {
+            return new CommandResult(
+                false, 
+                "Errors de validações", 
+                _validationMessage.GetErrorMessages());
+        }
+
         var locality = new Locality(
             command.IbgeCode,
             command.Name,
@@ -36,36 +51,67 @@ public class LocalityCommandHandler :
         _localityRepository.Create(locality);
 
         await _unitOfWork.CommitAsync(cancelationToken);
-        //se deu tudo certo para salvar
-        return new CommandResult(true, "Localização criada com sucesso", locality);
+
+        return new CommandResult(
+            true, 
+            "IBGE criado com sucesso", 
+            command);
     }
 
     public async Task<ICommandResult> Handle(
-        DeleteCommand command,
+        DeleteLocalityCommand command,
         CancellationToken cancelationToken)
     {
-        //fazer a validação(se tiver válido)
+        if (!ExecuteValidation(new DeleteCommandValidation(), command))
+        {
+            return new CommandResult(
+                false,
+                "Erros de validações",
+                _validationMessage.GetErrorMessages());
+        }
+
         var locality = (await _localityRepository.GetByIbgeAsync(command.IbgeCode)).FirstOrDefault();
+        
         if (locality == null)
-            return new CommandResult(false, $"A localização com Ibge: {command.IbgeCode} não foi encontrada", command);
+            return new CommandResult(
+                false, 
+                $"Ibge {command.IbgeCode} não encontrado",
+                command);
 
         _localityRepository.Delete(locality);
 
         await _unitOfWork.CommitAsync(cancelationToken);
-        //se deu tudo certo para salvar
-        return new CommandResult(true, "Localização excluída com sucesso", locality);
+
+        return new CommandResult(
+            true,
+            "IBGE excluído com sucesso", 
+            new ListIbgeViewModel
+            {
+                IbgeCode = locality.Id.Value,
+                Name = locality.City.Value,
+                State = locality.State.Value
+            });
     }
 
     public async Task<ICommandResult> Handle(
-        UpdateCommand command,
+        UpdateLocalityCommand command,
         CancellationToken cancelationToken)
     {
-        //validação do command
+        if (!ExecuteValidation(new UpdateCommandValidation(), command))
+        {
+            return new CommandResult(
+                false,
+                "Erros de validações",
+                _validationMessage.GetErrorMessages());
+        }
 
         var locality = (await _localityRepository.GetByIbgeAsync(command.IbgeCode)).FirstOrDefault();
 
         if (locality == null)
-            return new CommandResult(false, "A localização a atualizar não foi encontrada no cadastro", command);
+            return new CommandResult(
+                false,
+                $"Ibge {command.IbgeCode} não encontrado",
+                command);
 
         locality.AlterCity(command.Name);
         locality.AlterState(command.State);
@@ -74,7 +120,36 @@ public class LocalityCommandHandler :
 
         await _unitOfWork.CommitAsync(cancelationToken);
 
-        //se tudo ok
-        return new CommandResult(true, "Alteração realizada", command);
+        return new CommandResult(
+            true,
+            "IBGE alterado com sucesso",
+            new ListIbgeViewModel
+            {
+                IbgeCode = locality.Id.Value,
+                Name = locality.City.Value,
+                State = locality.State.Value
+            }); 
+    }
+
+    public async Task<ICommandResult> Handle(
+        UploadCsvCommand command, 
+        CancellationToken cancelationToken)
+    {
+        var file = command.UploadFile;
+        if (file == null || file.Length == 0)
+        {
+            return new CommandResult(
+                false,
+                $"Problemas no upload do arquivo",
+                new { Upload = $"{command.UploadFile?.FileName}" });
+        }
+
+        if (!Path.GetExtension(file.FileName.ToLower()).Contains(".csv"))
+        {
+            return new CommandResult(
+                false,
+                $"Problemas no upload do arquivo",
+                new { Upload = $"A extensão do arquivo precisa ser .csv" });
+        }
     }
 }

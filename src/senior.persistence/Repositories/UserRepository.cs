@@ -18,7 +18,7 @@ public sealed class UserRepository : IUserRepository
         => _context.Users.Add(user);
 
     public void Update(User user)
-        => _context.Users.Update(user);    
+        => _context.Users.Update(user);
 
     public Task<User?> GetUserByEmailAsync(Email email)
     {

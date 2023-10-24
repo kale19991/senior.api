@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using senior.application.ViewModels.Account;
 using senior.application.ViewModels.Locality;
 using senior.domain.Entites;
 
@@ -18,6 +19,8 @@ namespace senior.application.Configurations
                 .ForMember(
                     dest => dest.State,
                     opt => opt.MapFrom(src => src.State.Value));
+
+            _ = CreateMap<ListUserViewModel, User>().ReverseMap();
         }
     }
 }

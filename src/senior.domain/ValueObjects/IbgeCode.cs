@@ -1,4 +1,6 @@
 ﻿using senior.domain.Primitives;
+using System.Text.Json.Serialization;
+
 namespace senior.domain.ValueObjects;
 
 public sealed class IbgeCode : ValueObject

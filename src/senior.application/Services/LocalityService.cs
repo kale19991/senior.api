@@ -21,24 +21,29 @@ public class LocalityService : ILocalityService
     }
 
     public async Task<CommandResult> Create(
-        CreateCommand command, 
+        CreateLocalityCommand command, 
         CancellationToken cancelationToken)
     {
         return (CommandResult)await _commandHandler.Handle(command, cancelationToken);
     }
 
     public async Task<CommandResult> Delete(
-        DeleteCommand command,
+        DeleteLocalityCommand command,
         CancellationToken cancelationToken)
     {
         return (CommandResult)await _commandHandler.Handle(command, cancelationToken);
     }
     
     public async Task<CommandResult> Update(
-        UpdateCommand command,
+        UpdateLocalityCommand command,
         CancellationToken cancelationToken)
     {
         return (CommandResult)await _commandHandler.Handle(command, cancelationToken);
+    }
+
+    public async Task<CommandResult> UploadCsvFile(UploadCsvCommand command, CancellationToken cancelationToken)
+    {
+        return (CommandResult)await _commandHandler.Handle(UploadCsvCommand, cancelationToken);
     }
 
     public async Task<ListIbgeViewModel?> GetIbgeByCode(
